@@ -17,7 +17,7 @@ class School
 	 end 
 	 
 	 def sort 
-	   name.sort 
+	   self.sort 
 	 end 
   
 end 
