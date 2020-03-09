@@ -1,20 +1,29 @@
 # code here!
-class School 
-  attr_accessor :roster, :student, :grade 
-  attr_reader :school 
+class School
+  attr_accessor :name, :roster
   
-  def initialize(school)
-    @school = school 
+  def initialize(name)
+    @name = name
+    @roster = {}
   end 
   
-  def roster
-    roster = {} 
-  end 
-  
-  def add_student(student, grade)
-    roster[grade] = {} 
-    roster[grade] << student  
-  end 
-end 
- 
-  		   
+ class Shoe
+  attr_accessor :color, :size, :material, :condition
+  attr_reader :brand
+
+  BRANDS = []
+
+  def initialize(brand)
+    @brand = brand
+    if !(BRANDS.include?(@brand))
+      BRANDS << @brand
+    end
+  end
+
+
+  def cobble
+    self.condition = "new"
+    puts "Your shoe is as good as new!"
+  end
+
+end
